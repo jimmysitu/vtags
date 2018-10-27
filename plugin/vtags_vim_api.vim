@@ -66,11 +66,33 @@ except:
     pass
 
 EOF
+call VimPythonExtend()
+if s:vtags_active == 1
+    map gi                   :py3 try_go_into_submodule()           <CR>
+    map gu                   :py3 try_go_upper_module()             <CR>
+    map mt                   :py3 try_print_module_trace()          <CR>
+    map gs                   :py3 try_trace_signal_sources()        <CR>
+    map gd                   :py3 try_trace_signal_destinations()   <CR>
+    map gb                   :py3 try_roll_back()                   <CR>
+    map gf                   :py3 try_go_forward()                  <CR>
+    map <Space><Left>        :py3 try_trace_signal_sources()        <CR>
+    map <Space><Right>       :py3 try_trace_signal_destinations()   <CR>
+    map <Space><Down>        :py3 try_roll_back()                   <CR>
+    map <Space><Up>          :py3 try_go_forward()                  <CR>
+    map <Space>v             :py3 try_show_frame()                  <CR>
+    map <Space>c             :py3 try_add_check_point()             <CR>
+    map <Space>b             :py3 try_add_base_module()             <CR>
+    map <Space>              :py3 try_space_operation()             <CR>
+    map <Space>h             :py3 try_hold_current_win()            <CR>
+    map <Space>d             :py3 try_del_operation()               <CR>
+    map <Space>s             :py3 try_save_env_snapshort()          <CR>
+endif
 endfunction
+
+map gt                       :call Vtags()                          <CR>
 
 "vi_HDLTags_begin-----------------------------------
 call VimPythonExtend()
-map gt                       :call Vtags()                          <CR>
 if s:vtags_active == 1
     map gi                   :py3 try_go_into_submodule()           <CR>
     map gu                   :py3 try_go_upper_module()             <CR>
