@@ -1,0 +1,12 @@
+Metadata-Version: 2.0
+Name: vtags
+Version: 2.24
+Summary: Python subprocess interface
+Home-page: http://www.vim.org/scripts/script.php?script_id=5494
+Author: Jimmy Situ
+Author-email: web@jimmystone.cn
+License: Jimmy Situ
+Description: A fork of vtags from Jun Cao, update code for python3 support
+Platform: Unix
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.7

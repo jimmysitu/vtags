@@ -1,0 +1,32 @@
+vtags.txt Verdi like, verilog code signal trace and show hierarchy script
+
+===============================================================================
+CONTENTS                                                        *vtags-contents*
+
+1. Usage...........................................................|vtags-usage
+
+
+===============================================================================
+1. Usage
+                                                                  *vtags-usage*
+shortcut key            function 
+    mt                  : print module trace from top to current cursor module.
+    gi                  : go into submodule 
+    gu                  : go upper module
+    gs                  : trace source
+    gd                  : trace destination
+    gf                  : go forward
+    gb                  : roll back
+    <Space><Left>       : trace source 
+    <Space><Right>      : trace destination 
+    <Space><Down>       : roll back 
+    <Space><Up>         : go forward 
+    <Space> + v         : view sidebar 
+    <Space> + c         : add checkpoint 
+    <Space> + b         : add basemodule 
+    <Space> + d         : delete 
+    <Space> +h          : hold cur window 
+    <Space>             : quick access 
+    <Space> + s         : save snapshort 
+    gvim/vim            : reload snapshort 
+
