@@ -56,6 +56,7 @@ endfunction
 "vi_HDLTags_begin-----------------------------------
 call VimPythonExtend()
 if s:vtags_active == 1
+    map vt                   :py3f vtags                            <CR>
     map gi                   :py3 try_go_into_submodule()           <CR>
     map gu                   :py3 try_go_upper_module()             <CR>
     map mt                   :py3 try_print_module_trace()          <CR>
