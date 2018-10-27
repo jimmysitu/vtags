@@ -53,9 +53,24 @@ except VtagsUnsupportFileExcept:
 EOF
 endfunction
 
+function! Vtags()
+python3 << EOF
+import os
+import vim
+vtags_install_path = vim.eval('s:path')
+assert(os.path.isdir(vtags_install_path))
+try:
+    os.system(vtags_install_path + '/vtags.py')
+    vim.command("let s:vtags_active = 1")
+except:
+    pass
+
+EOF
+endfunction
+
 "vi_HDLTags_begin-----------------------------------
 call VimPythonExtend()
-map gt                   :py3f vtags.py                            <CR>
+map gt                       :call Vtags()                          <CR>
 if s:vtags_active == 1
     map gi                   :py3 try_go_into_submodule()           <CR>
     map gu                   :py3 try_go_upper_module()             <CR>
