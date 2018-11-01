@@ -31,4 +31,7 @@ then run the following in Vim:
 |\<Space> + h   |hold cur window 
 |\<Space>       |quick access 
 |\<Space> + s   |save snapshort 
-|gvim/vim       |reload snapshort 
+|gvim/vim       |reload snapshort
+
+# Notice
+This is a from Jun Cao's [vtags](https://www.vim.org/scripts/script.php?script_id=5494)
