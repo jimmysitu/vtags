@@ -1,10 +1,34 @@
 # Installation
-    (1) uncompress vtag-x.xx.tar.gz and move to install path anywhere you want
-    (2) add alias vtags.py to ~/.cshrc or ~/.bashrc depend on your os:
-        for .cshrc  : alias vtags 'python <your install path>/vtags.py'
-        for .bashrc : alias vtags='python <your install path>/vtags.py'
-    (3) source .cshrc or .bashrc
-    (4) add vtags_vim_api.vim to ~/.vimrc
-        source <your install path>/vtags_vim_api.vim
+## Install from Vundle
+Place this in your .vimrc:
+```vim
+Plugin 'universal-ctags/ctags'
+```
+then run the following in Vim:
+```bash
+:source %
+:PluginInstall
+```
 
-# Complete documentation see the "vtags-x.xx/doc"
+# Usage
+|shortcut key|function|
+|------------|--------|
+|mt|print module trace from top to current cursor module.
+|gi|go into submodule 
+|gu|go upper module
+|gs|trace source
+|gd|trace destination
+|gf|go forward
+|gb|jjjroll back
+|<Space><Left> |trace source 
+|<Space><Right>|trace destination 
+|<Space><Down> |roll back 
+|<Space><Up>   |go forward 
+|<Space> + v   |view sidebar 
+|<Space> + c   |add checkpoint 
+|<Space> + b   |add basemodule 
+|<Space> + d   |delete 
+|<Space> + h   |hold cur window 
+|<Space>       |quick access 
+|<Space> + s   |save snapshort 
+|gvim/vim      |reload snapshort 
