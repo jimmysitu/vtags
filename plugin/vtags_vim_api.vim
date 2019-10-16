@@ -68,13 +68,13 @@ except:
 EOF
 call VimPythonExtend()
 if s:vtags_active == 1
-    map vi                   :py3 try_go_into_submodule()           <CR>
-    map vu                   :py3 try_go_upper_module()             <CR>
+    map gi                   :py3 try_go_into_submodule()           <CR>
+    map gu                   :py3 try_go_upper_module()             <CR>
     map mt                   :py3 try_print_module_trace()          <CR>
-    map vs                   :py3 try_trace_signal_sources()        <CR>
-    map vd                   :py3 try_trace_signal_destinations()   <CR>
-    map vb                   :py3 try_roll_back()                   <CR>
-    map vf                   :py3 try_go_forward()                  <CR>
+    map gs                   :py3 try_trace_signal_sources()        <CR>
+    map gd                   :py3 try_trace_signal_destinations()   <CR>
+    map gb                   :py3 try_roll_back()                   <CR>
+    map gf                   :py3 try_go_forward()                  <CR>
     map <Space><Left>        :py3 try_trace_signal_sources()        <CR>
     map <Space><Right>       :py3 try_trace_signal_destinations()   <CR>
     map <Space><Down>        :py3 try_roll_back()                   <CR>
@@ -89,18 +89,18 @@ if s:vtags_active == 1
 endif
 endfunction
 
-map vt                       :call Vtags()                          <CR>
+map gt                       :call Vtags()                          <CR>
 
 "vi_HDLTags_begin-----------------------------------
 call VimPythonExtend()
 if s:vtags_active == 1
-    map vi                   :py3 try_go_into_submodule()           <CR>
-    map vu                   :py3 try_go_upper_module()             <CR>
+    map gi                   :py3 try_go_into_submodule()           <CR>
+    map gu                   :py3 try_go_upper_module()             <CR>
     map mt                   :py3 try_print_module_trace()          <CR>
-    map vs                   :py3 try_trace_signal_sources()        <CR>
-    map vd                   :py3 try_trace_signal_destinations()   <CR>
-    map vb                   :py3 try_roll_back()                   <CR>
-    map vf                   :py3 try_go_forward()                  <CR>
+    map gs                   :py3 try_trace_signal_sources()        <CR>
+    map gd                   :py3 try_trace_signal_destinations()   <CR>
+    map gb                   :py3 try_roll_back()                   <CR>
+    map gf                   :py3 try_go_forward()                  <CR>
     map <Space><Left>        :py3 try_trace_signal_sources()        <CR>
     map <Space><Right>       :py3 try_trace_signal_destinations()   <CR>
     map <Space><Down>        :py3 try_roll_back()                   <CR>
